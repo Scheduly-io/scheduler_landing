@@ -1,7 +1,28 @@
-<nav>
-    {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif%}>
-            {{ item.name }}
-        </a>
-    {% endfor %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Scheduly</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item {% if page.url == "/" %}active{% endif%}">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item {% if page.url == "/about" %}active{% endif%}">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item {% if page.url == "/pricing" %}active{% endif%}">
+                <a class="nav-link" href="/#pricing">Pricing</a>
+            </li>
+            <li class="nav-item {% if page.url == "/documentation" %}active{% endif%}">
+                <a class="nav-link" href="/documentation">Documentation</a>
+            </li>
+        </ul>
+        <a href="#" class="btn btn-success">
+            <i class="fas fa-sign-in-alt"></i>
+            &nbsp;
+            Try it for free!
+          </a>
+    </div>
 </nav>
